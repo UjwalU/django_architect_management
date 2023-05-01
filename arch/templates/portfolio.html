@@ -1,0 +1,17 @@
+<h1>{{ architect.name }}'s Portfolio</h1>
+
+<p>{{ architect.bio }}</p>
+
+<h2>Portfolio Items</h2>
+
+<ul>
+{% for item in portfolio_items %}
+    <li>
+        <h3>{{ item.title }}</h3>
+        <img src="{{ item.image.url }}" alt="{{ item.title }}">
+        <p>{{ item.description }}</p>
+        <button><p><a class="btn btn-secondary" href="http://127.0.0.1:8000/projects/1/">PROJECTS &raquo;</a></p></button>
+        <button><p><a class="btn btn-secondary" href="http://127.0.0.1:8000/designpage/1/">DESIGNS &raquo;</a></p></button>
+    </li>
+{% endfor %}
+</ul>

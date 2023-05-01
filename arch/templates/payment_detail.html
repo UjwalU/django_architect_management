@@ -1,0 +1,13 @@
+<h1>Payment Details</h1>
+<ul>
+    {% for payment in paymentss %}
+     <li>
+        <div>
+            <h2>Payment for {{ payment.project.name }}</h2>
+            <p>Payment date: {{ payment.payment_date }}</p>
+            <p>Payment amount: {{ payment.payment_amount }}</p>
+            <p>Payment status: {{ payment.payment_status }}</p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>

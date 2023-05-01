@@ -1,0 +1,12 @@
+<ul>
+    {% for project in projectss %}
+     <li>
+        <h1>{{ project.name }} </h1>
+<p>Architect: {{ project.architect }}</p>
+<p>{{ project.description }}</p>
+<p>Location: {{ project.location }}</p>
+<p>Completion Date: {{ project.completion_date }}</p>
+<p>Budget: {{ project.budget }}</p>
+    </li>
+    {% endfor %}
+</ul>

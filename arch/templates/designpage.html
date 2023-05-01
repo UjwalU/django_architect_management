@@ -1,0 +1,13 @@
+<ul>
+    {% for design in designss %}
+     <li>
+        <div>
+            <h2>Design for {{ design.project.name }}</h2>
+            <p>Design date: {{ design.design_date }}</p>
+            {% for image in design.design_images.all %}
+                <img src="{{ image.url }}" alt="{{ image.name }}">
+            {% endfor %}
+        </div>
+    </li>
+    {% endfor %}
+</ul>
